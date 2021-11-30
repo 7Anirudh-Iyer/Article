@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Article | Edit your articles</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+            integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.1/firebase-database.js"></script>
+        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script>
+            const firebaseConfig = {
+                apiKey: "AIzaSyBRj_U0l7mK_I1mde6s9QyPgBYgjq0jFrk",
+                authDomain: "article-cd9ae.firebaseapp.com",
+                databaseURL: "https://article-cd9ae-default-rtdb.firebaseio.com",
+                projectId: "article-cd9ae",
+                storageBucket: "article-cd9ae.appspot.com",
+                messagingSenderId: "957990407265",
+                appId: "1:957990407265:web:0f01df21d2a234fbe06e20"
+            };
+
+            const app = firebase.initializeApp(firebaseConfig);
+        </script>
+    </head>
+
+    <body>
+        <div id="document-details">
+            <input type="text" placeholder="Enter title" id="title"
+                title="This article will be published under this name" /><br>
+            <input type="text" placeholder="Enter description" id="description"
+                title="This will be displayed below your article to help search" /><br>
+        </div>
+        <div id="name-field">
+            <input type="text" placeholder="Enter your name" id="name"
+                title="Your name will be displayed using the entry" /><br>
+        </div>
+        <div id="editor">
+            <section id="toolbar" style="cursor: pointer; border-style: solid;">
+                <div name="edit" id="bold" class="icon fas fa-bold" style="margin-top: 5px;"></div><br>
+                <div id="italic" class="icon fas fa-italic" style="margin-top: 5px;"></div><br>
+                <div id="underline" class="icon fas fa-underline" style="margin-top: 5px;"></div><br>
+                <div id="strikeThrough" class="icon fas fa-strikethrough" style="margin-top: 5px;"></div><br>
+                <div id="createLink" class="icon fas fa-link" style="margin-top: 5px;"></div><br>
+                <div id="insertUnorderedList" class="icon fas fa-list-ul" style="margin-top: 5px;"></div><br>
+                <div id="insertOrderedList" class="icon fas fa-list-ol" style="margin-top: 5px;"></div><br>
+                <div id="justifyLeft" class="icon fas fa-align-left" style="margin-top: 5px;"></div><br>
+                <div id="justifyRight" class="icon fas fa-align-right" style="margin-top: 5px;"></div><br>
+                <div id="justifyCenter" class="icon fas fa-align-center" style="margin-top: 5px;"></div><br>
+                <div id="justifyFull" class="icon fas fa-align-justify" style="margin-top: 5px;"></div><br>
+            </section>
+            <div id="content" contenteditable="true"></div>
+        </div>
+        <!-- <input type="button" value="Publish" id="publish" /> -->
+        <script src="./script.js"></script>
+    </body>
+</html>

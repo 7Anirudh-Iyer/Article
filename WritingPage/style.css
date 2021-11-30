@@ -1,0 +1,62 @@
+html, body{
+    display: block;
+    border-color: blue;
+    border-width: 100px;
+}
+#document-details{
+    display: flex;
+    justify-content: space-around;
+}
+#title{
+    width: 25%;
+    border-color: black;
+    border-radius: 5px;
+}
+#description{
+    width: 75%;
+    border-color: black;
+    border-radius: 5px;
+}
+#name-field{
+    display: flex;
+    justify-content: right;
+    margin-top: 5px;
+}
+#name{
+    border-color: black;
+    border-radius: 5px;
+}
+#content{
+    height: 80%;
+    width: 60%;
+    position: absolute;
+    border-style: solid;
+    border-color: black;
+    border-radius: 5px;
+    top: 70px;
+    left: 70px;
+    border-right: none;
+    border-top: none;
+    border-bottom: none;
+}
+#toolbar {
+    height: 400px; /* Full-height: remove this if you want "auto" height */
+    width: 95%; /* Set the width of the sidebar */
+    z-index: 2; /* Stay on top */
+    top: 8; /* Stay at the top */
+    margin-left: 10px;
+    margin-top: 10px;
+    overflow-x: hidden; /* Disable horizontal scroll */
+    padding-top: 80px;
+    padding-left: 20px;
+    border-radius: 10px;
+}
+
+    /* The navigation menu links */
+.sidenav div {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
